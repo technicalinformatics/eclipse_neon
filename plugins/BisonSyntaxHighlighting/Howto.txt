@@ -1,0 +1,31 @@
+XMLPartitionScanner.java
+1   add public string for new partition type
+2   add new IPredicateRule for new partition type
+IXMLColorConstants.java
+3   add new RGB to for new partition type
+XMLDocumentProvider.java
+4   Include string from 1 when making IDocumentPartitioner
+XMLConfiguration.java
+5   modify getConfiguredContentTypes() so it also returns string from 1
+6   create a DamagerRepairer for new partition type
+7   add it to reconciler with setDamager() and setRepairer()
+
+
+
+
+IXMLColorConstants.java
+1   add new RGB to for new partition type
+CBlockScanner.java
+2   copy XMLTagScanner.java
+3   Extend RuleBasedScanner
+4   define IRule array for rules
+5   define IToken for color attributes
+6   set rules with color attributes
+7   call setRules(rules);
+XMLConfiguration.java
+8   add protected member cblockscanner of type CBlockScanner
+9   add protected class getCBlockScanner
+       which initializes cblockscanner by calling new if cblockscanner does not exist
+       it also sets the default return token
+10  use the CBlockScanner to create a DefaultDamagerRepairer
+11  use the damagerrepairer to set the reconciler's Damager and Repairer

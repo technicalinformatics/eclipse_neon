@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="BisonIDE"
+            id="com.bisonide.vsd">
+      </category>
+      <view
+            name="BisonIDE VSD View"
+            icon="icons/sample.gif"
+            category="com.bisonide.vsd"
+            class="com.bisonide.vsd.views.VisualSyntaxDiagram"
+            id="com.bisonide.vsd.views.VisualSyntaxDiagram">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.ui.resourcePerspective">
+         <view
+               ratio="0.5"
+               relative="org.eclipse.ui.views.TaskList"
+               relationship="right"
+               id="com.bisonide.vsd.views.VisualSyntaxDiagram">
+         </view>
+      </perspectiveExtension>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            name="Bison Editor"
+            extensions="y"
+            icon="icons/sample.gif"
+            contributorClass="bisonparser.editors.BisonActionContributor"
+            class="bisonparser.editors.BisonEditor"
+            id="bisonparser.editors.BisonEditor">
+      </editor>
+   </extension>
+   
+   <extension point="org.eclipse.ui.propertyPages">
+      <page id="BadWordsPreferencePage"
+            name="Bad Words"
+            class="bisonparser.editors.BadWordsPreferencePage">
+      </page>
+
+      <page id="BadWordsColorPreferencePage"
+            name="Colors"
+            class="bisonparser.editors.BadWordsColorPreferencePage"
+            category="BadWordsPreferencePage">
+      </page>   
+   </extension>
+   <extension
+         id="Compile"
+         name="Compile"
+         point="org.eclipse.ui.actionSets">
+      <actionSet
+            description="For compiling Bison"
+            id="BisonCompiling.actionSet1"
+            label="BisonCompiling.actionSet1"
+            visible="true">        
+    <action id="BisonCompiling.Action"
+    		label="Compile Bison"
+          toolbarPath="org.eclipse.ui.workbench.file"
+          menubarPath="org.eclipse.ui.run/Compile Bison"
+          tooltip="Starts the New Invokatron Document Wizard."
+          class="BisonCompiling.BisonCompilingAction">
+    </action>   
+      </actionSet>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            name="Bison Wizards"
+            id="LiteralWizard2">
+      </category>
+      <wizard
+            name="Bison Project"
+            icon="icons/sample.gif"
+            category="LiteralWizard2"
+            class="bisonwizard.BisonWizard"
+            id="literalwizard2.wizards.SampleNewWizard">
+      </wizard>
+   </extension>
+</plugin>

@@ -1,0 +1,137 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?metadataRepository version='1.1.0'?>
+<repository name='update site: http://cmakeed.sourceforge.net/eclipse/' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1'>
+  <properties size='2'>
+    <property name='p2.timestamp' value='1473624201505'/>
+    <property name='site.checksum' value='3168685485'/>
+  </properties>
+  <references size='2'>
+    <repository uri='http://downloads.sourceforge.net/project/cmakeed/eclipse/' url='http://downloads.sourceforge.net/project/cmakeed/eclipse/' type='0' options='0'/>
+    <repository uri='http://downloads.sourceforge.net/project/cmakeed/eclipse/' url='http://downloads.sourceforge.net/project/cmakeed/eclipse/' type='1' options='0'/>
+  </references>
+  <units size='5'>
+    <unit id='com.cthing.cmakeed.feature.feature.jar' version='1.1.6'>
+      <properties size='4'>
+        <property name='org.eclipse.equinox.p2.name' value='CMake Editor'/>
+        <property name='org.eclipse.equinox.p2.description' value='The CMakeEd plug-in provides an editor for CMake files. The plug-in&#xA;registers an editor for files named CMakeLists.txt, CMakeLists.txt.in, *cmake and *.cmake.in'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://cmakeed.sourceforge.net'/>
+        <property name='org.eclipse.equinox.p2.provider' value='C Thing Software/BlueQuartz Software'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.feature.feature.jar' version='1.1.6'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='feature' version='1.0.0'/>
+        <provided namespace='org.eclipse.update.feature' name='com.cthing.cmakeed.feature' version='1.1.6'/>
+      </provides>
+      <filter>
+        (org.eclipse.update.install.features=true)
+      </filter>
+      <artifacts size='1'>
+        <artifact classifier='org.eclipse.update.feature' id='com.cthing.cmakeed.feature' version='1.1.6'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='zipped'>
+            true
+          </instruction>
+        </instructions>
+      </touchpointData>
+      <licenses size='1'>
+        <license uri='http://www.eclipse.org/legal/cpl-v10.html' url='http://www.eclipse.org/legal/cpl-v10.html'>
+          This plug-in is licensed under the terms of the Common Public License - v 1.0. A copy of the license is available from http://www.eclipse.org/legal/cpl-v10.html.
+        </license>
+      </licenses>
+      <copyright>
+        Copyright 2007 C Thing Software. All rights reserved.&#xA;Copyright 2008, 2009 BlueQuartz Software. All rights Reserved.
+      </copyright>
+    </unit>
+    <unit id='com.cthing.cmakeed.ui' version='1.1.6' singleton='false'>
+      <update id='com.cthing.cmakeed.ui' range='[0.0.0,1.1.6)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.partial.iu' value='true'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.ui' version='1.1.6'/>
+        <provided namespace='osgi.bundle' name='com.cthing.cmakeed.ui' version='1.1.6'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.cthing.cmakeed.ui' version='1.1.6'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.cthing.cmakeed.ui&#xA;Bundle-Version: 1.1.6&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+    <unit id='com.cthing.cmakeed.feature.feature.group' version='1.1.6' singleton='false'>
+      <update id='com.cthing.cmakeed.feature.feature.group' range='[0.0.0,1.1.6)' severity='0'/>
+      <properties size='5'>
+        <property name='org.eclipse.equinox.p2.name' value='CMake Editor'/>
+        <property name='org.eclipse.equinox.p2.description' value='The CMakeEd plug-in provides an editor for CMake files. The plug-in&#xA;registers an editor for files named CMakeLists.txt, CMakeLists.txt.in, *cmake and *.cmake.in'/>
+        <property name='org.eclipse.equinox.p2.description.url' value='http://cmakeed.sourceforge.net'/>
+        <property name='org.eclipse.equinox.p2.provider' value='C Thing Software/BlueQuartz Software'/>
+        <property name='org.eclipse.equinox.p2.type.group' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.feature.feature.group' version='1.1.6'/>
+      </provides>
+      <requires size='3'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.core' range='[1.1.6,1.1.6]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.ui' range='[1.1.6,1.1.6]'/>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.feature.feature.jar' range='[1.1.6,1.1.6]'>
+          <filter>
+            (org.eclipse.update.install.features=true)
+          </filter>
+        </required>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+      <licenses size='1'>
+        <license uri='http://www.eclipse.org/legal/cpl-v10.html' url='http://www.eclipse.org/legal/cpl-v10.html'>
+          This plug-in is licensed under the terms of the Common Public License - v 1.0. A copy of the license is available from http://www.eclipse.org/legal/cpl-v10.html.
+        </license>
+      </licenses>
+      <copyright>
+        Copyright 2007 C Thing Software. All rights reserved.&#xA;Copyright 2008, 2009 BlueQuartz Software. All rights Reserved.
+      </copyright>
+    </unit>
+    <unit id='http://cmakeed.sourceforge.net/eclipse/site.xml.CMake Editor Plugin' version='1.0.0.217AcKb_nh'>
+      <properties size='2'>
+        <property name='org.eclipse.equinox.p2.name' value='CMakeEditor'/>
+        <property name='org.eclipse.equinox.p2.type.category' value='true'/>
+      </properties>
+      <provides size='1'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='http://cmakeed.sourceforge.net/eclipse/site.xml.CMake Editor Plugin' version='1.0.0.217AcKb_nh'/>
+      </provides>
+      <requires size='1'>
+        <required namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.feature.feature.group' range='[1.1.6,1.1.6]'/>
+      </requires>
+      <touchpoint id='null' version='0.0.0'/>
+    </unit>
+    <unit id='com.cthing.cmakeed.core' version='1.1.6' singleton='false'>
+      <update id='com.cthing.cmakeed.core' range='[0.0.0,1.1.6)' severity='0'/>
+      <properties size='1'>
+        <property name='org.eclipse.equinox.p2.partial.iu' value='true'/>
+      </properties>
+      <provides size='3'>
+        <provided namespace='org.eclipse.equinox.p2.iu' name='com.cthing.cmakeed.core' version='1.1.6'/>
+        <provided namespace='osgi.bundle' name='com.cthing.cmakeed.core' version='1.1.6'/>
+        <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
+      </provides>
+      <artifacts size='1'>
+        <artifact classifier='osgi.bundle' id='com.cthing.cmakeed.core' version='1.1.6'/>
+      </artifacts>
+      <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
+      <touchpointData size='1'>
+        <instructions size='1'>
+          <instruction key='manifest'>
+            Bundle-SymbolicName: com.cthing.cmakeed.core&#xA;Bundle-Version: 1.1.6&#xA;
+          </instruction>
+        </instructions>
+      </touchpointData>
+    </unit>
+  </units>
+</repository>

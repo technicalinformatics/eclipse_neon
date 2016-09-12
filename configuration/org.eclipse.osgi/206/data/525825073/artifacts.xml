@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?artifactRepository version='1.1.0'?>
+<repository name='update site: http://cmakeed.sourceforge.net/eclipse/' type='org.eclipse.equinox.p2.artifact.repository.simpleRepository' version='1'>
+  <properties size='3'>
+    <property name='p2.timestamp' value='1473624206247'/>
+    <property name='eclipse.p2.force.threading' value='true'/>
+    <property name='site.checksum' value='3168685485'/>
+  </properties>
+  <mappings size='3'>
+    <rule filter='(&amp; (classifier=osgi.bundle))' output='${repoUrl}/plugins/${id}_${version}.jar'/>
+    <rule filter='(&amp; (classifier=binary))' output='${repoUrl}/binary/${id}_${version}'/>
+    <rule filter='(&amp; (classifier=org.eclipse.update.feature))' output='${repoUrl}/features/${id}_${version}.jar'/>
+  </mappings>
+  <artifacts size='3'>
+    <artifact classifier='osgi.bundle' id='com.cthing.cmakeed.core' version='1.1.6'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://downloads.sourceforge.net/project/cmakeed/eclipse/plugins/com.cthing.cmakeed.core_1.1.6.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='org.eclipse.update.feature' id='com.cthing.cmakeed.feature' version='1.1.6'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://downloads.sourceforge.net/project/cmakeed/eclipse/features/com.cthing.cmakeed.feature_1.1.6.jar'/>
+      </repositoryProperties>
+    </artifact>
+    <artifact classifier='osgi.bundle' id='com.cthing.cmakeed.ui' version='1.1.6'>
+      <repositoryProperties size='1'>
+        <property name='artifact.reference' value='http://downloads.sourceforge.net/project/cmakeed/eclipse/plugins/com.cthing.cmakeed.ui_1.1.6.jar'/>
+      </repositoryProperties>
+    </artifact>
+  </artifacts>
+</repository>
